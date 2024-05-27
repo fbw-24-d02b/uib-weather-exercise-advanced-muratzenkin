@@ -53,6 +53,10 @@ body {
     text-decoration: none;
     padding: 10px;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 .dropdown-menu {
@@ -175,7 +179,86 @@ body {
   }
 }
 
-.extra {
+/* -----------test container Bereich ----------- */
+
+ #projects-section {
+  padding: 100px 20px;
+  background-color: rgb(6, 224, 240, 0.4);
+  color: black;
+  margin: 20px auto;
+  width: 80%;
+  height: 80vh;
+ }
+
+ #projects-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+ }
+
+ .flex-container {
+  display: flex;
+  flex-direction: row;
+ }
+
+ details {
+  
+  
+  margin: 20px auto;
+  width: 80%;
+  max-width: 100%;
+  border-radius: 6px;
+  background-color: transparent;
+ }
+
+ details summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  padding: 30px;
+ }
+
+ details img {
+  min-height: 50px;
+  min-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  
+ }
+
+ details h3 {
+  font-size: 1.5rem;
+ 
+ }
+
+ details .text-container {
+  padding: 30px;
+  padding-top: 0;
+ }
+
+ details a {
+  display: inline-block;
+  margin-top: 30px;
+  color: white;
+  padding: .75em 1.5em;
+  border-radius: 2px;
+  background-color: #333;
+  font-weight: 600;
+  text-decoration: none;
+
+ }
+
+ details a:hover {
+  background-color: transparent;
+  color: black;
+ }
+
+/* ---------5 Tage Weather Bereich ----------- */
+
+/* .extra {
   background-color: rgb(6, 224, 240, 0.4);
   color: black;
   margin: 20px auto;
@@ -219,7 +302,7 @@ body {
 
 :has(input:checked) + p {
   display: block;
-}
+} */
 
 .extra2 {
   background-color: rgb(6, 224, 240, 0.4);
