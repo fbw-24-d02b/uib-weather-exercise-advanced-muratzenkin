@@ -14,6 +14,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+
+    
   </head>
   <body>
 
@@ -23,7 +26,7 @@
       <nav class="navbar">
         <div class="container-fluid">
             <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width="50" height="50" class="rounded-5 d-inline-block align-text-top m-2">
-            <h2>Weather App</h2>
+            <h2 class="logo">Weather App</h2>
         </div>
       </nav>
 
@@ -36,11 +39,18 @@
                 <a class="nav-link" href="#weather">Weather</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#projects-section">5 Tage</a>
+                <a class="nav-link" href="#projects-section">Wochenvorschau</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#news">News</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#videos">Videos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comments.html">Kommentare</a>
+              </li>
+            
             </ul>
           </div>
         </div>
@@ -52,140 +62,116 @@
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
             <li><a class="dropdown-item" href="#weather">Weather</a></li>
-            <li><a class="dropdown-item" href="#projects-section">5 Tage</a></li>
+            <li><a class="dropdown-item" href="#projects-section">Wochenvorschau</a></li>
             <li><a class="dropdown-item" href="#news">News</a></li>
+            <li><a class="dropdown-item" href="#videos">Videos</a></li>
+
+            <li><a class="dropdown-item" href="comments.html">Kommentare</a></li>
+
+
           </ul>
         </div>
       </div>
 
     </section>
     <!------ Header end ----------------- -->
-
     <!-- ------- Weather Bereich ----------- -->
 
-    <div class="container my-5"  id="weather">
-      <div class="card shadow text-center" style="height: 400px;">
+    <div class="container mt-5 "  id="weather">
+      <div class="card shadow text-center bg-transparent" style="height: 600px;" id="card">
         <div class="card-header d-flex justify-content-between align-items-center">
           <i class="fas fa-sun fa-2x text-warning"></i>
-          <span class="h5 mb-0">Weather</span>
-          <i class="fas fa-cloud fa-2x text-primary"></i>
+          <i class="fas fa-cloud fa-2x text-secondary"></i>
         </div>
-        <div class="card-body">
+        <div class="card-body ">
           <div class="mb-3 d-flex flex-column ">
             <label for="searchBar" class="form-label"><i class="fas fa-location-dot"></i> Bitte Stadtnamen eingeben!</label>
             <input type="text" class="form-control text-center w-100" id="searchBar" placeholder="Stadtnamen">
           </div>
           <div class="content">
-            <div class="city h4">Istanbul, TR</div>
+            <div class="city h1">Düsseldorf, DE</div>
             <div class="temp display-4">22°C</div>
-            <div class="desc h5">Sonnig</div>
-            <div class="minmax">14°C / 19°C</div>
+            <div class="desc h3">Sonnig</div>
+            <div class="min-max h3">14°C / 19°C</div>
           </div>
+        </div>
+      
+        <!-- Carousel  -->
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active ">
+              <div class="card-header">
+                <h3>18Uhr</h3>
+                <i class="fas fa-sun fa-2x text-warning"></i>
+                <p>22°C</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-header">
+                <h3>19Uhr</h3>
+                <i class="fas fa-sun fa-2x text-warning"></i>
+                <p>22°C</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-header">
+                <h3>20Uhr</h3>
+                <i class="fas fa-sun fa-2x text-warning"></i>
+                <p>20°C</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-header">
+                <h3>21Uhr</h3>
+                <i class="fas fa-cloud fa-2x text-secondary"></i>
+                <p>19°C</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-header">
+                <h3>22Uhr</h3>
+                <i class="fas fa-cloud fa-2x text-secondary"></i>
+                <p>19°C</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-header">
+                <h3>23Uhr</h3>
+                <i class="fas fa-cloud fa-2x text-secondary"></i>
+                <p>18°C</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-header">
+                <h3>24Uhr</h3>
+                <i class="fas fa-moon fa-2x text-primary"></i>
+                <p>15°C</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-info" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-info" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </div>
+ 
 
-    <!--------- Carousel  -------------- -->
-  <div class="container mt-4">
-    <div id="carouselExampleFade" class="carousel slide">
-      <div class="carousel-inner" style="height: 300px;">
-        <h2 class="text-center">5 Tage</h2>
-        <br>
-        <div class="carousel-item active text-center" >
-          <div class="card-header">
-            <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Montag" class="img-fluid rounded-circle" height="50" width="50">
-            <h3>Montag</h3>
-            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontag" aria-expanded="false" aria-controls="collapseMontag">
-              <i class="fas fa-chevron-down"></i>
-            </button>
-          </div>
-          <div id="collapseMontag" class="collapse">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi delectus excepturi voluptates expedita!</p>
-              <a href="#" class="btn btn-primary">Visit Webseite</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item text-center">
-          <div class="card-header">
-            <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Montag" class="img-fluid rounded-circle" height="50" width="50">
-            <h3>Dienstag</h3>
-            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontag" aria-expanded="false" aria-controls="collapseMontag">
-              <i class="fas fa-chevron-down"></i>
-            </button>
-          </div>
-          <div id="collapseMontag" class="collapse">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi delectus excepturi voluptates expedita!</p>
-              <a href="#" class="btn btn-primary">Visit Webseite</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item text-center">
-          <div class="card-header">
-            <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Montag" class="img-fluid rounded-circle" height="50" width="50">
-            <h3>Mittwoch</h3>
-            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontag" aria-expanded="false" aria-controls="collapseMontag">
-              <i class="fas fa-chevron-down"></i>
-            </button>
-          </div>
-          <div id="collapseMontag" class="collapse">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi delectus excepturi voluptates expedita!</p>
-              <a href="#" class="btn btn-primary">Visit Webseite</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item text-center">
-          <div class="card-header">
-            <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Montag" class="img-fluid rounded-circle" height="50" width="50">
-            <h3>Donnerstag</h3>
-            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontag" aria-expanded="false" aria-controls="collapseMontag">
-              <i class="fas fa-chevron-down"></i>
-            </button>
-          </div>
-          <div id="collapseMontag" class="collapse">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi delectus excepturi voluptates expedita!</p>
-              <a href="#" class="btn btn-primary">Visit Webseite</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item text-center">
-          <div class="card-header">
-            <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Montag" class="img-fluid rounded-circle" height="50" width="50">
-            <h3>Freitag</h3>
-            <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMontag" aria-expanded="false" aria-controls="collapseMontag">
-              <i class="fas fa-chevron-down"></i>
-            </button>
-          </div>
-          <div id="collapseMontag" class="collapse">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi delectus excepturi voluptates expedita!</p>
-              <a href="#" class="btn btn-primary">Visit Webseite</a>
-            </div>
-          </div>
-        </div>
-        <!-- tage end  -->
-        </div>
-      
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bg-info" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon bg-info" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
+    <!-- End  -->
+
+    
 
     <!-- ------- 5 Tage Bereich ----------- -->
 
-    <section class="container text-center my-5" id="projects-section">
-      <h2 class="mb-4">5 Tage</h2>
+    <section class="container text-center" id="projects-section">
+      <h2 class="mb-4">Wochenvorschau</h2>
       <div class="row">
         <!-- Montag -->
         <div class="col-md-4 mb-4">
@@ -259,11 +245,13 @@
             </div>
           </div>
         </div>
-        <!-- Freitag -->
+
+        <!-- Freitag  -->
+
         <div class="col-md-4 mb-4">
           <div class="card">
             <div class="card-header">
-              <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Freitag" class="img-fluid rounded-circle" height="50" width="50">
+              <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mittwoch" class="img-fluid rounded-circle" height="50" width="50">
               <h3>Freitag</h3>
               <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFreitag" aria-expanded="false" aria-controls="collapseFreitag">
                 <i class="fas fa-chevron-down"></i>
@@ -277,13 +265,33 @@
             </div>
           </div>
         </div>
+
+
+        <!-- Samstag -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-header">
+              <img src="https://images.unsplash.com/photo-1534794048419-48e110dca88e?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Freitag" class="img-fluid rounded-circle" height="50" width="50">
+              <h3>Samstag</h3>
+              <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSamstag" aria-expanded="false" aria-controls="collapseSamstag">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div id="collapseSamstag" class="collapse">
+              <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi delectus excepturi voluptates expedita!</p>
+                <a href="#" class="btn btn-primary">Visit Webseite</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ------- News Bereich ----------- -->
 
 
-    <div class="container my-5" id="news">
+    <div class="container" id="news">
       <h2 class="text-center mb-4">News</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
@@ -340,8 +348,69 @@
             </div>
           </div>
         </div>
+
+      </div>
+
+    </div>
+
+    <!-- Videos Bereich  -->
+
+    <div class="container bg-white" id="videos">
+      <h2 class="text-center mb-4">Empfehlungen - Wettervideos und Wettervorhersagen</h2>
+      <div class="row">
+        <div class="col p-4 m-3">
+          <video src="./assets/img/BigBuckBunny_320x180.mp4" controls></video>
+          <h3 class="text-info">Wetter heute: Nach den Regenfluten endlich Sonne</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus, magnam alias rerum dolores numquam ipsa laboriosam dicta mollitia eligendi?</p>
+          <a href="#">Zum Video<i class="fa-solid fa-right-long text-white bg-info rounded-5"></i></a>
+        </div>
+        <div class="col p-4 m-3">
+          <video src="./assets/img/BigBuckBunny_320x180.mp4" controls></video>
+          <h3 class="text-info">Wetter heute: Nach den Regenfluten endlich Sonne</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus, magnam alias rerum dolores numquam ipsa laboriosam dicta mollitia eligendi?</p>
+          <a href="#">Zum Video<i class="fa-solid fa-right-long text-white bg-info rounded-5"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col p-4 m-3">
+          <video src="./assets/img/BigBuckBunny_320x180.mp4" controls></video>
+          <h3 class="text-info">Wetter heute: Nach den Regenfluten endlich Sonne</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus, magnam alias rerum dolores numquam ipsa laboriosam dicta mollitia eligendi?</p>
+          <a href="#">Zum Video<i class="fa-solid fa-right-long text-white bg-info rounded-5"></i></a>
+        </div>
+        <div class="col p-4 m-3">
+          <video src="./assets/img/BigBuckBunny_320x180.mp4" controls></video>
+          <h3 class="text-info">Wetter heute: Nach den Regenfluten endlich Sonne</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus, magnam alias rerum dolores numquam ipsa laboriosam dicta mollitia eligendi?</p>
+          <a href="#">Zum Video<i class="fa-solid fa-right-long text-white bg-info rounded-5"></i></a>
+        </div>
+        <div class="col p-4 m-3">
+          <video src="./assets/img/BigBuckBunny_320x180.mp4" controls></video>
+          <h3 class="text-info">Wetter heute: Nach den Regenfluten endlich Sonne</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus, magnam alias rerum dolores numquam ipsa laboriosam dicta mollitia eligendi?</p>
+          <a href="#">Zum Video<i class="fa-solid fa-right-long text-white bg-info rounded-5"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------- Footer Bereich ----------- -->
      
-   
+    <footer class="text-white p-3 row">
+      <div class="col">
+      <h4>Weather App</h4>
+      <p>&copy; 2021 Weather App</p>
+    </div>
+    <div class="col ">
+      <h5>Folgen Sie weater.app auf</h5>
+      <div class="mit-hover">
+
+      
+      <a href="#"><i class="fa-brands fa-instagram text-white mx-2"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook text-white mx-2"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter text-white mx-2"></i></a>
+    </div>
+    </div>
+    </footer>
     <script src="script.js"></script>
 
   </body>
